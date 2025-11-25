@@ -35,4 +35,347 @@
             text-align: center;
         }
 
-        .hero-blog::before
+        .hero-blog::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.4));
+        }
+
+        .hero-blog-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-blog h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero-blog p.hero-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .breadcrumb-nav {
+            background: transparent;
+            font-size: 0.95rem;
+        }
+        .breadcrumb-nav a {
+            text-decoration: none;
+            color: #555;
+        }
+        .breadcrumb-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .blog-wrapper {
+            padding: 40px 0 60px;
+        }
+
+        .blog-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 40px 32px;
+        }
+
+        .blog-meta {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .blog-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .blog-subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 24px;
+        }
+
+        .blog-cover {
+            border-radius: 14px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .blog-cover img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            max-height: 420px;
+        }
+
+        .blog-content p {
+            line-height: 1.8;
+            font-size: 1rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .blog-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .blog-content p:first-letter {
+            font-size: 2.4rem;
+            font-weight: 700;
+            float: left;
+            line-height: 1;
+            padding-right: 8px;
+            padding-top: 4px;
+        }
+
+        .blog-inline-photo img {
+            max-width: 480px;
+            width: 100%;
+            border-radius: 14px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+        }
+        .blog-inline-photo-caption {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        .blog-divider {
+            border-top: 1px solid #eee;
+            margin: 32px 0 24px;
+        }
+
+        .blog-footer-meta {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .tag-pill {
+            display: inline-block;
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background-color: #f0f0f0;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+
+        .back-link {
+            margin-top: 16px;
+            font-size: 0.9rem;
+        }
+        .back-link a {
+            text-decoration: none;
+            color: #333;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #222;
+            color: #bbb;
+            padding: 30px 0;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        footer a:hover {
+            color: #ccc;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 576px) {
+            .hero-blog {
+                padding: 90px 16px 70px;
+            }
+            .hero-blog h1 {
+                font-size: 2.4rem;
+            }
+            .blog-card {
+                padding: 28px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img src="mm-logo.png" alt="MinichMotion Logo" class="d-inline-block align-text-top">
+                MinichMotion
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html#adventures">Adventures</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#art">Art</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-blog">
+        <div class="hero-blog-content">
+            <h1>Florida</h1>
+            <p class="hero-subtitle">The Pool Deck: History, Style, and Why It’s Always Sexy</p>
+        </div>
+    </section>
+
+    <!-- BREADCRUMB -->
+    <div class="container mt-3">
+        <nav class="breadcrumb-nav" aria-label="breadcrumb">
+            <span><a href="index.html">Home</a> &nbsp;/&nbsp; <a href="index.html#adventures">Adventures</a> &nbsp;/&nbsp; Florida</span>
+        </nav>
+    </div>
+
+    <!-- BLOG CONTENT -->
+    <section class="blog-wrapper">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="blog-card">
+                        <div class="blog-meta">Adventure Log • Florida</div>
+                        <h2 class="blog-title">The Pool Deck: History, Style, and Why It’s Always Sexy</h2>
+                        <p class="blog-subtitle">
+                            From historic bathhouses to drained skate bowls and luxury resorts, the pool deck has always been more than concrete — it’s a stage for life.
+                        </p>
+
+                        <div class="blog-cover">
+                            <img src="Florida.jpg" alt="Florida pool and coastline">
+                        </div>
+
+                        <div class="blog-content">
+                            <p>
+                                As I pack my bags to leave Florida once again, I can’t help but pause and reflect on something that has been a constant in my life: the pool deck. To me, pool decks are more than just concrete slabs surrounding a body of water — they’re stages where life’s best moments play out. They’re places of joy, freedom, elegance, movement, and yes…a little bit of sexiness.
+                                From their historic roots to my own experiences bartending, skating, and just plain living around them, pool decks have always had a special place in my story — and in human history.
+                            </p>
+
+                            <h3>A Short History of Pools and Their Decks</h3>
+                            <p>
+                                The story of the pool stretches back thousands of years. Ancient civilizations built communal baths and pools not just for hygiene but as social hubs — places to gather, celebrate, and show off. Fast-forward to modern times, and that spirit hasn’t changed much.
+                            </p>
+                            <p>
+                                In the 20th century, pools became symbols of wealth and leisure, particularly in the U.S. Having a backyard pool wasn’t just about cooling off — it was a status symbol, a mark of elegance and success. And with the pool came the pool deck: the ultimate stage for gatherings, sunbathing, cocktails, and community.
+                            </p>
+
+                            <h3>My Life on the Deck</h3>
+
+                            <!-- INLINE PHOTO INSERTED -->
+                            <div class="blog-inline-photo text-center mb-4">
+                                <img src="asher-pool.jpg" alt="Asher serving drinks at the pool deck">
+                                <div class="blog-inline-photo-caption">Poolside service — where the stories began.</div>
+                            </div>
+
+                            <p>
+                                I started humbly as a pool server at beautiful decks across Florida. Later, I worked as a bartender at the first indoor pool in the U.S. — the historic Lightner Museum pool in St. Augustine. That place once held glamorous gatherings in the early 1900s and now sits preserved as a piece of history. To me, it symbolized how pools and their decks are timeless — even when drained and turned into museums, they’re still about people coming together.
+                            </p>
+                            <p>
+                                But pools weren’t just work. I’ve skated empty pools, turning old bowls into playgrounds. I’ve toasted with best friends at poolside parties. I’ve watched kids take their first swim lessons, couples share their first kiss, brides pose in wedding dresses, and skaters land tricks that made the crowd roar. Pools became my backdrop for life — for first dates, last dates, family memories, and even moments of quiet meditation floating alone under the sun.
+                            </p>
+
+                            <h3>The Aesthetics of a Pool Deck</h3>
+                            <p>
+                                Let’s be real — when you’re booking a hotel or scrolling through Airbnb, one of the first things you check is the pool. Is it infinity-style with a view? Family-friendly with slides and waterfalls? A party-ready adult-only oasis with cabanas and DJs? The vibe of a pool deck sells the whole experience.
+                            </p>
+                            <p>
+                                At The Breakers in Palm Beach, I saw firsthand how the magic happens: the right mix of chairs, umbrellas, trees, service, music, and, of course, people. It’s not just about swimming — it’s about creating a scene that feels alive, chic, and unforgettable.
+                            </p>
+
+                            <h3>Home Pools: Power, Luxury, and Lifestyle</h3>
+                            <p>
+                                Owning a pool has long been a symbol of wealth and success. A pool in your backyard says: I’ve made it. But it’s more than flexing status — it’s about creating a private sanctuary. The pool becomes the heartbeat of the home, where barbecues happen, where family gathers, and where you sneak off late at night for a quiet swim that feels almost spiritual.
+                            </p>
+
+                            <h3>Skating Pools: The Rebel History</h3>
+                            <p>
+                                In the 1970s, California skaters discovered that drained backyard pools made the perfect playground. That’s where modern skateboarding was born — in the bowls of suburban America. Pool decks went from polished leisure spaces to gritty canvases of rebellion and creativity.
+                            </p>
+                            <p>
+                                That blend of danger, freedom, and style is why pool decks are forever cool. They can be classy, but they can also be punk.
+                            </p>
+
+                            <h3>Pools for Health and Safety</h3>
+                            <p>
+                                Pools aren’t just parties and style — they’re also about health, movement, and responsibility. Swimming is one of the best workouts you can do, and I’ll admit I haven’t competed much, but I respect the discipline of those who do.
+                            </p>
+                            <p>
+                                At the same time, pools demand respect. They can be dangerous if not handled with care. That’s why lifeguards matter, CPR training matters, and basic swim skills are essential. A pool can give life, but without safety, it can also take it.
+                            </p>
+
+                            <h3>Pools as Meditation</h3>
+                            <p>
+                                There’s something almost spiritual about swimming alone in a quiet pool, or even standing in an empty drained one. The echo, the stillness, the blue tiles around you — it’s like being in a cathedral built for water. For me, those solo swims or skate sessions became moments of meditation, where life slowed down and I could just be.
+                            </p>
+
+                            <h3>Why Pool Decks Are Sexy and Cool</h3>
+                            <p>
+                                So, why do I keep coming back to the pool deck? Because it’s alive. It’s where people show off their style, their bodies, their energy. It’s where strangers connect and memories are made. Pool decks are both elegant and rebellious, luxurious and playful. They’re timeless stages for human expression.
+                            </p>
+                            <p>
+                                Whenever you step onto one — whether it’s an infinity pool in a luxury resort, a family pool in the suburbs, a drained skate bowl, or a friend’s backyard — you’re stepping into history, style, and a space built for joy.
+                            </p>
+
+                            <h3>Conclusion: Long Live the Pool Deck</h3>
+                            <p>
+                                Pool decks are where elegance meets rebellion, where families bond and skaters fly, where first dates spark and best friends laugh until they’re drunk and sunburned. They’re reflections of culture, power, and play.
+                            </p>
+                            <p>
+                                For me, the pool deck isn’t just concrete — it’s a symbol of freedom, sexiness, and being alive. And wherever I go, whether I’m serving drinks, skating bowls, or just taking a midnight dip, I know the pool deck will always be waiting to host life’s best moments.
+                            </p>
+                        </div>
+
+                        <div class="blog-divider"></div>
+
+                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                            <div class="blog-footer-meta mb-2">
+                                Written for <strong>MinichMotion</strong> • Life of Asher Minich
+                            </div>
+                            <div class="mb-2">
+                                <span class="tag-pill">Florida</span>
+                                <span class="tag-pill">Pool Decks</span>
+                                <span class="tag-pill">Skate Culture</span>
+                                <span class="tag-pill">Travel Log</span>
+                            </div>
+                        </div>
+
+                        <div class="back-link">
+                            ← <a href="index.html#adventures">Back to Adventures</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-2 fs-4 fw-bold">Follow Asher on 
+                <a href="https://www.instagram.com/asherminich?igsh=MWk0emhhMnEwdXpudQ==" target="_blank">Instagram</a> | 
+                <a href="https://www.linkedin.com/in/asher-minich/" target="_blank">LinkedIn</a>
+            </p>
+            <p class="mb-0">© 2025 MinichMotion. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
